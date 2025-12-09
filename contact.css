@@ -1,0 +1,162 @@
+body{
+    background-color: rgb(236, 226, 215);
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position:relative;
+
+}
+.Header h1{
+    color:rgb(94, 88, 80);
+    margin-right: auto;
+}
+.Menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px; 
+    font-weight: 500;
+    color:rgb(94, 88, 80);
+    font-size: 28px;
+    font-family:"Montserrat",sans-serif;   
+    padding: 8px 18px;
+    
+}
+.p1, .p2, .p3, .p4 {
+    padding: 5px 12px;   
+    border-radius: 15px; 
+}
+
+.p4{
+    background-color: rgb(183, 170, 174);
+}
+.p1:hover,.p2:hover,.p3:hover,.p4:hover {
+    background-color: rgb(183, 170, 174);
+    transition: 0.25s ease-in-out;
+    padding: 8px 18px; 
+    border-radius: 15px;  
+    cursor:pointer;
+}
+
+.contact{
+    width: 400px;
+    margin: 80px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+@media (max-width: 1024px) {
+
+    .Menu {
+        font-size: 20px;
+        gap: 20px;
+    }
+
+    .Header h1 {
+        font-size: 28px;
+    }
+
+    .contact {
+        width: 80%;
+        margin-top: 50px;
+    }
+}
+
+/* --- 768px (Tablet Portrait) --- */
+@media (max-width: 768px) {
+
+    .Menu {
+        position: static;
+        transform: none;
+        margin: 10px auto 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        gap: 15px;
+    }
+
+    .Header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Header h1 {
+        margin: 0;
+    }
+
+    .contact {
+        width: 90%;
+    }
+}
+
+/* --- 480px (Mobile) --- */
+@media (max-width: 480px) {
+
+    .Header h1 {
+        font-size: 24px;
+    }
+
+    .Menu {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .contact {
+        width: 92%;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
